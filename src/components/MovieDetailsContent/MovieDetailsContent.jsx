@@ -4,8 +4,6 @@ import AddContent from './AddContent/AddContent';
 import { Suspense } from 'react';
 import Loader from 'components/Loader/Loader';
 
-// import css from './MovieDetailsCart.module.css';
-
 const MovieDetailsContent = ({ details }) => {
   const { title, poster_path, vote_average, overview, genres } = details;
   const userRate = (vote_average * 10).toFixed(1);

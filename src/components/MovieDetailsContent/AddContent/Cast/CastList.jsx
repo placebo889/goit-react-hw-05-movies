@@ -2,8 +2,9 @@ import css from './Cast.module.css';
 
 const CastList = ({ cast }) => {
   const BASE_IMG = 'https://image.tmdb.org/t/p/w500';
+  const DEFAULT_IMG = 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
 
-  return (
+   return (
     <>
       <h2 className={css.cast_title}>Cast:</h2>
       {cast.length ? (
@@ -12,7 +13,7 @@ const CastList = ({ cast }) => {
             <li key={id} className={css.cast_item}>
               <img
                 className={css.cast_img}
-                src={BASE_IMG + profile_path}
+                src={profile_path ? BASE_IMG + profile_path : DEFAULT_IMG}
                 alt={name}
                 loading="lazy"
               />
